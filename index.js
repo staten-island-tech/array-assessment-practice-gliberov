@@ -90,9 +90,10 @@ const titles = [
 //Sort books from oldest to most recent
 
 //sort books alphabetically
-
+  titles.sort()
+  console.log(titles)
 //Find who wrote War and Peace
-
+console.log(books[5].authorFirst, books[5].authorLast)
 //how many books were written before 1900?
 
 //was there at least one book published within the last 100 years?
@@ -100,3 +101,4 @@ const titles = [
 //was every book published within the last 100 years?
 
 //print a list of books that "includes" the genre historical
+
