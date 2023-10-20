@@ -86,27 +86,51 @@ const titles = [
 
 //Array of authors and the book they wrote
 //"--- wrote --- in ---"
+books.forEach((books)=> 
+  (console.log(`${books.authorFirst} ${books.authorLast} wrote ${books.name} in ${books.publishDate}`)
+))
+
 
 //Sort books from oldest to most recent
+const dates = []
+books.forEach((book) => dates.push(book.publishDate))
+dates.sort()
+
+console.log(dates)
+
 
 //sort books alphabetically
   titles.sort()
   console.log(titles)
 //Find who wrote War and Peace
+const author = books.filter((war) => war.name.includes("War and Peace"));
+  author.forEach((fart) => console.log(fart.authorFirst, fart.authorLast))
 console.log(books[5].authorFirst, books[5].authorLast)
 //how many books were written before 1900?
 const oldBooks = books.filter((book) => {return book.publishDate < 1900});
 console.log(oldBooks.length);
 //was there at least one book published within the last 100 years?
-
+const veryNewbooks = books.filter((book) => {return book.publishDate > 1923});
+function test1() {
+  if (veryNewbooks.length = 0) {
+    return false; 
+  }
+  else {
+    return true; 
+  } 
+}
+console.log(test1());
 //was every book published within the last 100 years?
 const veryOldbooks = books.filter((book) => {return book.publishDate < 1923});
-function test() {
-if (veryOldbooks.length = 0) {
-  return true; }
-else if (veryOldbooks.length > 0) {
-  return false; } }
-console.log(test());
+function test2() {
+  if (veryOldbooks.length = 0) {
+    return true; 
+  }
+  else {
+    return false; 
+  } 
+}
+console.log(test2());
 
 //print a list of books that "includes" the genre historical
 const historicalBooks = books.filter((g) => g.genre.includes("historical"));
