@@ -95,10 +95,19 @@ const titles = [
 //Find who wrote War and Peace
 console.log(books[5].authorFirst, books[5].authorLast)
 //how many books were written before 1900?
-
+const oldBooks = books.filter((book) => {return book.publishDate < 1900});
+console.log(oldBooks.length);
 //was there at least one book published within the last 100 years?
 
 //was every book published within the last 100 years?
+const veryOldbooks = books.filter((book) => {return book.publishDate < 1923});
+function test() {
+if (veryOldbooks.length = 0) {
+  return true; }
+else if (veryOldbooks.length > 0) {
+  return false; } }
+console.log(test());
 
 //print a list of books that "includes" the genre historical
-
+const historicalBooks = books.filter((g) => g.genre.includes("historical"));
+console.log(historicalBooks);
