@@ -92,7 +92,7 @@ books.forEach((book) => {
 //Sort books from oldest to most recent
 console.log(
   "books sorted by age",
-  books.sort((a, b) => a.publishDate - b.publishDate)
+  books.sort((book1, book2) => book1.publishDate - book2.publishDate)
 );
 //sort books alphabetically
   titles.sort()
@@ -115,7 +115,7 @@ else  {
   return true; } }
 console.log(test1());
 //was every book published within the last 100 years?
-const veryOldbooks = books.filter((book) => {return book.publishDate < 1923});
+const veryOldbooks = books.filter((book) => {return book.publishDate < year - 100});
 function test2() {
 if (veryOldbooks.length = 0) {
   return true; }
